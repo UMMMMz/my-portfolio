@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+font-family: 'Poppins', sans-serif;
+
+
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+    border-bottom: 1px solid #000;
+    z-index: 10;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+nav .logo{
+    width: 220px;
+    cursor: pointer;
+}
+.nav-btn{
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    outline: 0;
+    border-radius: 40px;
+    cursor: pointer;
+    padding: 15px 25px;
+
+}
+.nav-btn img{
+    width: 16px;
+    margin-left: 8px;
+}
+.head{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#eefff9 0% , #ffccc1 , #dcdbff 100%);
+    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.head h1{
+    margin-top: 100px;
+    font-size: 13vw;
+    line-height: 11vw;
+}
+.btn-conatiner{
+    margin: 20px 0;
+}
+.head button{
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    font-style: 18px;
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+.dark{
+    background: #000;
+    color: #fff;
+    padding: 10px 10px 10px 30px ;
+    border-radius: 40px;
+
+}
+.dark img{
+    width: 40px;
+    background: #fff;
+    padding: 10px;
+    margin-left: 3px;
+    border-radius: 50%;
+}
+.light{
+    background: transparent;
+    text-decoration: underline;
+
+}
+.light img{
+    width: 20px;
+    margin-left: 10px;
+}
+.head p {
+    max-width: 360px;
+    font-weight: 500;
+
+}
+.user{
+  width: 45%;
+  max-width: 365px;
+  position: absolute;
+  right: 9%;
+  bottom: 3px;
+  border-radius: 5px;
+}
+                   /* animation */
+.head h1 span{
+    background: linear-gradient(#000 , #000);
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size: 0%;
+
+}
+
+
+.head h1 span:first-child{
+    animation: textcolor1 2s linear infinite alternate;
+}
+@keyframes textcolor1{
+    0%{
+        background-size: 0%;
+    }
+    40%{
+        background-size: 100%;
+
+    }
+    100%{
+        background-size: 100%;
+    }
+}
+.head h1 span:last-child{
+    animation: textcolor2 2s linear infinite alternate;
+}
+@keyframes textcolor2{
+    0%{
+        background-size: 0%;
+    }
+    40%{
+        background-size: 0%;
+
+    }
+    100%{
+        background-size: 100%;
+    }
+}
+.menu{
+    display: none;
+}
+         /* medai queries for navbar */
+
+  @media only screen and (max-width:600px){
+            nav ul{
+                position: absolute;
+                width: 100%;
+                background: #000;
+                color: #fff;
+                left: 0;
+                top: 100%;
+                text-align: center;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s;
+            }
+            .nav-btn{
+                display: none;
+
+            }
+            nav .logo{
+                width: 150px;
+
+            }
+            nav ul li{
+                margin: 10px;
+
+            }
+            .menu{
+                display: block;
+                width: 30px;
+                cursor: pointer;
+            }
+            .show-menu{
+                max-height: 60px;
+            }
+         } 
+           
+
+         /* media queries for header ::content  */
+
+
+         @media only screen and (max-width:600px){
+            .head{
+                min-height: auto;
+                padding: 0;
+
+            }
+            .user{
+                width: 100%;
+                right: auto;
+                position: relative;
+                margin-top: 100px;
+            }
+            .header-content{
+                position: absolute;
+                bottom: 0;
+                padding: 0 10%;
+                z-index: 2;
+                padding-bottom: 40px;
+                background: linear-gradient(transparent , #fff);
+            }
+            .btn-conatiner{
+                margin: 5px 0;
+
+            }
+            .head button{
+                font-size: 14px;
+                margin-right: 10px;
+            }
+            .dark{
+                padding: 7px 7px 7px 20px;
+                margin-bottom: 10px;
+
+            }
+            .dark img{
+                width: 30px;
+                padding: 5px;
+                margin-left: 15px;
+            }
+            .light{
+                width: 12px;
+                margin-left: 5px;
+            }
+            .head h1{
+                font-size: 70px;
+                line-height: 60px;
+                margin-bottom: 20px;
+            }
+         }

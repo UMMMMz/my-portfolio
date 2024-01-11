@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="s.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Poppins:ital,wght@0,300;0,500;0,600;1,400;1,500&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"></head>
+<body>
+    <nav>
+        <img src="images/logo.png" class="logo">
+        <ul id="menu-links">
+            <li>HOME</li>
+            <li>SERVICES</li>
+            <li>PROJECTS</li>
+            <li>ABOUT US</li>
+        </ul>
+        <button class="nav-btn">Get started <img src="images/arrow-white.png" ></button>
+     <img src="/images/menu.png" class="menu" onclick="toggleMenu()">
+    </nav>
+    <div class="head">
+        
+        <div class="header-content">
+            <h1><span>FREE</span><br><span>LANCER</span></h1>
+            <div class="btn-conatiner">
+                <button class="dark">REQUEST call back <img src="/images/phone.png" alt=""></button>
+                <button class="light">know more <img src="/images/arrow-black.png" alt=""></button>
+            </div>
+                <p>passionate MERN STACK  developer with few months of experience .</p>
+
+        </div>
+<img src="/images/WhatsApp Image 2023-12-15 at 12.02.12 AM.jpeg" class="user">  
+</div>
+<script>
+    let navBar = document.querySelector('nav');
+let menuLinks =document.getElementById("menu-links");
+
+function toggleMenu(){
+menuLinks.classList.toggle('show-menu')
+}
+
+    window.onscroll = function(){
+        if(window.scrollY > 0){
+            navBar.style.background = '#eefff9';
+        }else{
+            navBar.style.background = 'transparent'
+        }
+
+    }
+</script>
+</body>
+</html>
